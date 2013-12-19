@@ -200,7 +200,7 @@
 ;(setq speedbar-hide-button-brackets-flag t)
 (setq speedbar-show-unknown-files t)
 (setq speedbar-smart-directory-expand-flag t)
-;(setq speedbar-use-images nil)
+(setq speedbar-use-images nil)
 (setq sr-speedbar-auto-refresh t)
 (setq sr-speedbar-max-width 50)
 (setq sr-speedbar-right-side nil)
