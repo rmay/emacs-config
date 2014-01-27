@@ -6,7 +6,8 @@
 (ido-mode t)
 
 ;; Set the starting position and width and height of Emacs Window
-(setq initial-frame-alist '((top . 10) (left . 30) (width . 120) (height . 35) ))
+;;(setq initial-frame-alist '((top . 10) (left . 30) (width . 120) (height . 35) ))
+(setq initial-frame-alist '((width . 120) (height . 35) ))
 
 ;; Prefer utf-8 encoding
 (prefer-coding-system 'utf-8)
@@ -131,6 +132,8 @@
     (setq org-agenda-file "/home/russell/Dropbox/org/tasks.org")
     (setq org-agenda-archive "/home/russell/Dropbox/org/archive_personal.org::")
     (setq deft-dir "/home/russell/Dropbox/PlainText/")
+    (find-file "/home/russell/Dropbox/org/personal.org")
+    (find-file "/home/russell/Dropbox/org/tasks.org")
   )
 )
 
@@ -151,9 +154,9 @@
 (setq
   deft-extension "txt"
   deft-directory deft-dir
-  deft-text-mode 'org-mode
+  ;deft-text-mode 'org-mode
   deft-use-filename-as-title 't
-  visual-line-mode nil)
+  )
 (global-set-key (kbd "<f9>") 'deft)
 
 
@@ -202,9 +205,10 @@
 (setq speedbar-smart-directory-expand-flag t)
 (setq speedbar-use-images nil)
 (setq sr-speedbar-auto-refresh t)
-(setq sr-speedbar-max-width 50)
+(setq sr-speedbar-max-width 10)
+(setq sr-speedbar-width-x 10)
 (setq sr-speedbar-right-side nil)
-(setq sr-speedbar-width-console 40)
+(setq sr-speedbar-width-console 10)
 (sr-speedbar-open)
 
 (when window-system
