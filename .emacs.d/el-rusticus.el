@@ -2,6 +2,8 @@
 
 ;;(setq warning-minimum-level :error)
 
+(set-scroll-bar-mode 'right)
+
 (require 'ido)
 (ido-mode t)
 
@@ -73,7 +75,9 @@
           (lambda () (run-hooks 'rdm-code-modes-hook)))
 (add-hook 'text-mode-hook
           (lambda () (run-hooks 'rdm-code-modes-hook)))
-
+(add-hook 'python-mode-hook
+          (lambda () (run-hooks 'rdm-code-modes-hook)))
+  
 ;; "y or n" instead of "yes or no"
 (fset 'yes-or-no-p 'y-or-n-p)
 
@@ -194,7 +198,7 @@
 
 (setq speedbar-frame-parameters
       '((minibuffer)
-	(width . 40)
+	(width . 10)
 	(border-width . 0)
 	(menu-bar-lines . 0)
 	(tool-bar-lines . 0)
@@ -202,14 +206,14 @@
 	(left-fringe . 0)))
 ;(setq speedbar-hide-button-brackets-flag t)
 (setq speedbar-show-unknown-files t)
-(setq speedbar-smart-directory-expand-flag t)
+;(setq speedbar-smart-directory-expand-flag t)
 (setq speedbar-use-images nil)
 (setq sr-speedbar-auto-refresh t)
 (setq sr-speedbar-max-width 10)
 (setq sr-speedbar-width-x 10)
 (setq sr-speedbar-right-side nil)
 (setq sr-speedbar-width-console 10)
-(sr-speedbar-open)
+'(sr-speedbar-open)
 
 (when window-system
   (defadvice sr-speedbar-open (after sr-speedbar-open-resize-frame activate)
