@@ -51,6 +51,7 @@
 (global-set-key [f2] 'eshell)
 (global-set-key [f3] 'calendar)
 (global-set-key "\C-f" 'isearch-forward-regexp)
+(global-set-key "\C-k" 'kill-whole-line)
 
 ;; Indentation
 (global-set-key (kbd "TAB") 'tab-to-tab-stop)
@@ -247,11 +248,28 @@
 
 
 
-;(require 'package)
-;(add-to-list 'package-archives 
-;    '("marmalade" .
-;      "http://marmalade-repo.org/packages/"))
-;(package-initialize)
+(require 'package)
+(add-to-list 'package-archives 
+    '("marmalade" .
+      "http://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives
+    '("melpa" . 
+      "http://melpa.milkbox.net/packages/"))
+(add-to-list 'package-archives
+    '("gnu" . 
+      "http://elpa.gnu.org/packages/"))
+(package-initialize)
+
+(require 'auto-complete-config)
+ ;(add-to-list 'ac-dictionary-directories
+ ;    "~/.emacs.d/.cask/24.3.50.1/elpa/auto-complete-20130724.1750/dict")
+(ac-config-default)
+(setq ac-ignore-case nil)
+(add-to-list 'ac-modes 'enh-ruby-mode)
+(add-to-list 'ac-modes 'web-mode)
+
+;(load-theme 'zenburn t)
+
 
 ;(require 'color-theme-sanityinc-tomorrow)
 

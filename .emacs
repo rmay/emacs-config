@@ -8,6 +8,6 @@
 )
 
 ;; My settings
-(add-to-list 'load-path "~/.emacs.d/")
+(add-to-list 'load-path "~/.emacs.d/lisp/")
 (require 'el-rusticus)
 
