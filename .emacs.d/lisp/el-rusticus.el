@@ -134,11 +134,14 @@
     (find-file "c:/Users/Russell/SkyDrive/Dropbox/org/personal.org")
   )
   (progn ; else
-    (setq org-agenda-file "/home/russell/Dropbox/org/tasks.org")
-    (setq org-agenda-archive "/home/russell/Dropbox/org/archive_personal.org::")
+    ;;;(setq org-agenda-file "/home/russell/Dropbox/org/tasks.org")
+    ;;;(setq org-agenda-archive "/home/russell/Dropbox/org/archive_personal.org::")
+    (setq org-agenda-file "/home/russell/Dropbox/org/work.org")
+    (setq org-agenda-archive "/home/russell/Dropbox/org/archive_work.org::")
     (setq deft-dir "/home/russell/Dropbox/PlainText/")
     (find-file "/home/russell/Dropbox/org/personal.org")
     (find-file "/home/russell/Dropbox/org/tasks.org")
+    (find-file "/home/russell/Dropbox/org/work.org")
   )
 )
 
@@ -195,38 +198,38 @@
 ; This was bugging me with Deft, so I took it out
 ;;;(add-hook 'before-save-hook (lambda () (delete-trailing-whitespace)))
 
-(require 'sr-speedbar)
+;;(require 'sr-speedbar)
 
-(setq speedbar-frame-parameters
-      '((minibuffer)
-	(width . 10)
-	(border-width . 0)
-	(menu-bar-lines . 0)
-	(tool-bar-lines . 0)
-	(unsplittable . t)
-	(left-fringe . 0)))
-;(setq speedbar-hide-button-brackets-flag t)
-(setq speedbar-show-unknown-files t)
-;(setq speedbar-smart-directory-expand-flag t)
-(setq speedbar-use-images nil)
-(setq sr-speedbar-auto-refresh t)
-(setq sr-speedbar-max-width 10)
-(setq sr-speedbar-width-x 10)
-(setq sr-speedbar-right-side nil)
-(setq sr-speedbar-width-console 10)
-'(sr-speedbar-open)
+;;(setq speedbar-frame-parameters
+;;      '((minibuffer)
+;;	(width . 10)
+;;	(border-width . 0)
+;;	(menu-bar-lines . 0)
+;;	(tool-bar-lines . 0)
+;;	(unsplittable . t)
+;;	(left-fringe . 0)))
+;;;(setq speedbar-hide-button-brackets-flag t)
+;;(setq speedbar-show-unknown-files t)
+;;;(setq speedbar-smart-directory-expand-flag t)
+;;(setq speedbar-use-images nil)
+;;(setq sr-speedbar-auto-refresh t)
+;;(setq sr-speedbar-max-width 10)
+;;(setq sr-speedbar-width-x 10)
+;;(setq sr-speedbar-right-side nil)
+;;(setq sr-speedbar-width-console 10)
+;;'(sr-speedbar-open)
 
-(when window-system
-  (defadvice sr-speedbar-open (after sr-speedbar-open-resize-frame activate)
-    (set-frame-width (selected-frame)
-                     (+ (frame-width) sr-speedbar-width)))
-  (ad-enable-advice 'sr-speedbar-open 'after 'sr-speedbar-open-resize-frame)
+;;(when window-system
+;;  (defadvice sr-speedbar-open (after sr-speedbar-open-resize-frame activate)
+;;    (set-frame-width (selected-frame)
+;;                     (+ (frame-width) sr-speedbar-width)))
+;;  (ad-enable-advice 'sr-speedbar-open 'after 'sr-speedbar-open-resize-frame)
 
-  (defadvice sr-speedbar-close (after sr-speedbar-close-resize-frame activate)
-    (sr-speedbar-recalculate-width)
-    (set-frame-width (selected-frame)
-                     (- (frame-width) sr-speedbar-width)))
-  (ad-enable-advice 'sr-speedbar-close 'after 'sr-speedbar-close-resize-frame))
+;;  (defadvice sr-speedbar-close (after sr-speedbar-close-resize-frame activate)
+;;    (sr-speedbar-recalculate-width)
+;;    (set-frame-width (selected-frame)
+;;                     (- (frame-width) sr-speedbar-width)))
+;;  (ad-enable-advice 'sr-speedbar-close 'after 'sr-speedbar-close-resize-frame))
 
 
 ;;(add-to-list 'load-path "C:/Users/Russell/.emacs.d/color-theme/")
@@ -282,6 +285,20 @@
 ;   (sp-local-pair "<%" "%>"))
 
 
+;; Frame title bar formatting to show full path of file
+(setq-default
+frame-title-format
+(list '((buffer-file-name " %f" (dired-directory
+dired-directory
+(revert-buffer-function " %b"
+("%b – Dir:  " default-directory)))))))
+
+(add-to-list 'load-path "~/.emacs.d/vendor/emacs-powerline")
+(require 'powerline)
+
+;(custom-set-faces
+; '(mode-line ((t (:foreground "#030303" :background "#bdbdbd" :box nil))))
+; '(mode-line-inactive ((t (:foreground "#f9f9f9" :background "#666666" :box nil)))))
 
 (provide 'el-rusticus)
 ;;; el-rusticus.el ends here
