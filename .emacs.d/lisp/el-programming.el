@@ -63,6 +63,10 @@
 ;;  (ad-enable-advice 'sr-speedbar-close 'after 'sr-speedbar-close-resize-frame))
 
 
+(add-to-list 'load-path "~/.emacs.d/vendor/emacs-powerline")
+(require 'powerline)
+
+
 ;;(require 'smartparens-config)
 ;;(require 'smartparens-ruby)
 ;;(smartparens-global-mode)
@@ -70,9 +74,6 @@
 ;;(sp-with-modes '(rhtml-mode)
 ;;   (sp-local-pair "<" ">")
 ;;   (sp-local-pair "<%" "%>"))
-
-;;(add-to-list 'load-path "~/.emacs.d/vendor/emacs-powerline")
-;;(require 'powerline)
 
 
 (provide 'el-programming)

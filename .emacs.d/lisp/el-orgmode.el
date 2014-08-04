@@ -48,7 +48,7 @@
     (setq deft-dir "/home/russell/Dropbox/PlainText/")
     (find-file "/home/russell/Dropbox/org/personal.org")
     (find-file "/home/russell/Dropbox/org/tasks.org")
-    ;;(find-file "/home/russell/Dropbox/org/work.org")
+    (find-file "/home/russell/Dropbox/org/work.org")
   )
 )
 

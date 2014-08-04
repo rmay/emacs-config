@@ -2,12 +2,13 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/home/russell/development/domus/domus_padrino/db/" . "migrate/")
  ("/home/russell/.emacs.d/vendor/" . "emacs-powerline/")
  ("/home/russell/work/" . "data/")
  ("/home/russell/Dropbox/ml/python/" . "digits/")
- ("/home/russell/Dropbox/ml/" . "python/")
+ ("/home/russell/Dropbox/ml/" . "titanic/")
  ("/home/russell/Dropbox/Apps/" . "Plain.txt/")
- ("/home/russell/Dropbox/" . "org/")
+ ("/home/russell/Dropbox/" . "Apps/")
  ("/home/russell/development/domus/domus_padrino/admin/views/" . "members/")
  ("/home/russell/development/domus/web_site/" . "db/")
  ("/home/russell/development/domus/web_site/app/" . "views/")
@@ -15,9 +16,9 @@
  ("/home/russell/development/domus/domus_padrino/admin/" . "controllers/")
  ("/home/russell/development/domus/domus_padrino/public/" . "stylesheets/")
  ("/home/" . "russell/")
- ("/home/russell/development/domus/domus_padrino/app/views/" . "serverstats/")
+ ("/home/russell/development/domus/domus_padrino/app/views/" . "list_items/")
  ("/home/russell/development/domus/domus_padrino/app/" . "views/")
- ("/home/russell/development/domus/domus_padrino/" . "app/")
+ ("/home/russell/development/domus/domus_padrino/" . "db/")
  ("/home/russell/development/domus/domus_web/" . "models/")
  ("/home/russell/development/domus/librarium/" . "modules/")
  ("/home/russell/development/domus/config/" . "environments/")
@@ -31,39 +32,45 @@
  ("/home/russell/development/domus/" . "domus_padrino/")
  ("/home/russell/development/" . "domus/")
  ("/home/russell/.emacs.d/" . "vendor/")
- ("/home/russell/" . ".emacs.d/")
+ ("/home/russell/" . "development/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
+ "/home/russell/emacs-config/.emacs.d/lisp/"
  "/home/russell/.emacs.d/lisp/"
+ "/home/russell/Dropbox/Apps/Plain.txt/"
+ "/home/russell/development/domus/domus_padrino/db/"
+ "/home/russell/development/domus/domus_padrino/db/migrate/"
+ "/home/russell/development/domus/domus_padrino/app/views/list_items/"
+ "/home/russell/Dropbox/ml/titanic/"
+ "/home/russell/development/domus/domus_padrino/app/views/serverstats/"
+ "/home/russell/development/domus/domus_padrino/app/controllers/"
+ "/home/russell/development/domus/domus_padrino/app/views/lists/"
+ "/home/russell/development/domus/domus_padrino/models/"
+ "/home/russell/"
+ "/home/russell/development/domus/domus_padrino/app/views/notes/"
+ "/home/russell/development/domus/domus_padrino/app/views/notebooks/"
+ "/home/russell/development/domus/domus_padrino/app/views/layouts/"
+ "/home/russell/development/domus/domus_padrino/app/views/domus/"
+ "/home/russell/development/domus/domus_padrino/app/views/sessions/"
  "/home/russell/Dropbox/org/"
  "/home/russell/.emacs.d/vendor/emacs-powerline/"
- "/home/russell/Dropbox/Apps/Plain.txt/"
  "/home/russell/work/"
  "/home/russell/work/data/"
  "/home/russell/Dropbox/ml/python/digits/"
- "/home/russell/development/domus/domus_padrino/app/views/serverstats/"
- "/home/russell/development/domus/domus_padrino/app/controllers/"
- "/home/russell/development/domus/domus_padrino/app/views/notes/"
  "/home/russell/development/domus/domus_padrino/app/views/weather_graph/"
- "/home/russell/development/domus/domus_padrino/app/views/list_items/"
  "/home/russell/development/domus/domus_padrino/app/views/base/"
  "/home/russell/development/domus/librarium/"
  "/home/russell/development/domus/librarium/modules/"
  "/home/russell/development/domus/domus_padrino/app/views/weather/"
- "/home/russell/development/domus/domus_padrino/app/views/layouts/"
- "/home/russell/development/domus/domus_padrino/db/"
  "/home/russell/development/domus/domus_padrino/app/helpers/"
  "/home/russell/development/domus/web_site/db/"
  "/home/russell/development/domus/domus_padrino/app/views/note_attachments/"
  "/home/russell/development/domus/domus_padrino/public/stylesheets/"
- "/home/russell/development/domus/domus_padrino/models/"
  "/home/russell/development/domus/web_site/app/views/notes/"
  "/home/russell/development/domus/domus_padrino/app/"
- "/home/russell/development/domus/domus_padrino/app/views/notebooks/"
  "/home/russell/development/domus/domus_padrino/"
- "/home/russell/development/domus/domus_padrino/app/views/lists/"
  "/home/russell/development/domus/web_site/app/controllers/"
  "/home/russell/development/domus/web_site/app/views/base/"
  "/home/russell/development/domus/domus_padrino/app/views/households/"
@@ -80,33 +87,73 @@
  "/home/russell/development/domus/"
  "/home/russell/development/domus/web_site/config/"
  "/home/russell/development/domus/domus_padrino/app/views/household_members/"
- "/home/russell/development/domus/domus_padrino/admin/views/members/"
- "/home/russell/development/domus/domus_padrino/admin/"
- "/home/russell/development/domus/domus_padrino/app/views/list_item/"
- "/home/russell/development/domus/web_site/app/views/list_item/"
- "/home/russell/development/domus/web_site/app/views/household/"
- "/home/russell/development/domus/domus_padrino/app/views/list/"
 )
 
 ;; ----- ido-work-file-list -----
 (
+ "el-orgmode.el"
+ "el-programming.el"
+ "el-packages.el"
  "el-rusticus.el"
- "archive_work.org"
- "powerline.el"
- "work.org"
  "Book log.txt"
- "show_log.py"
- "convert_log_to_csv.sh"
- "log_schema.csv"
- "convert_log_to_csv.py"
- "parselog.py"
+ "schema.rb"
+ "022_add_fields_to_list_item.rb"
+ "021_add_field_to_list.rb"
+ "index.html.erb"
+ "cleantitanic.py"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/home/russell/.emacs.d/lisp/" (21436 46684 0 0) "rusticusruby.el" "rb_optparse.bash" "csharp-mode.el" "deft.el" "javascript-mode.el" "el-rusticus.el" "rubydb3x.el" "ruby-style.el" "rubydb2x.el" "linum.el" "psvn.el" "smooth-scrolling.el" "ruby-additional.el" "find-recursive.el" "snippet.el" "rdoc-mode.el" "old-rusticusruby.el" "./" "inf-ruby.el" "sr-speedbar.el" "mode-compile.el" "../" "ruby-mode.el" "ruby-electric.el" "tidy.el" "rb_optparse.zsh")
+ ("/home/russell/emacs-config/.emacs.d/lisp/" (21471 5500 0 0) "rusticusruby.el" "old2-rusticus.el" "rb_optparse.bash" "csharp-mode.el" "deft.el" "javascript-mode.el" "el-rusticus.el" "rubydb3x.el" "ruby-style.el" "rubydb2x.el" "el-color.el" "linum.el" "psvn.el" "smooth-scrolling.el" "ruby-additional.el" "find-recursive.el" "snippet.el" "rdoc-mode.el" "old-rusticusruby.el" "./" "inf-ruby.el" "sr-speedbar.el" "mode-compile.el" "el-packages.el" "../" "el-programming.el" "ruby-mode.el" "el-basic.el" "ruby-electric.el" "el-orgmode.el" "tidy.el" "rb_optparse.zsh")
 
- ("/home/russell/Dropbox/org/" (21438 64026 0 0) "work.org" "archive_personal.org" "birthdays.org" "t3.org" "rails.png" "arzan.org" "cloudtech.org" "tasks.org" "./" "personal.org" "../" "archive_work.org" "preparedness.org")
+ ("/home/russell/development/domus/web_site/config/" (21464 10789 0 0) "boot.rb" "database.rb" "apps.rb" "./" "../")
+
+ ("/home/russell/development/domus/web_site/app/controllers/" (21464 20147 0 0) "member_attachments.rb" "sessions.rb" "notes.rb" "household_members.rb" "member_additional_data.rb" ".#domus.rb" "birthdays.rb" "note_attachments.rb" "base.rb" "weather.rb" "notebooks.rb" "list_items.rb" "member_emails.rb" "lists.rb" "./" "households.rb" "weather_graph.rb" "members.rb" "../" "serverstats.rb")
+
+ ("/home/russell/development/domus/web_site/db/" (21464 20171 0 0) "original_seeds.rb" "add_list_types.rb" "seeds.rb" "import_journal.rb" "domus_padrino_development.db" "export_full_domus_db.sh" "./" "journal3_db.txt" "../" "migrate/" "schema.rb" "journal.db")
+
+ ("/home/russell/.emacs.d/lisp/" (21471 5307 0 0) "rusticusruby.el" "old2-rusticus.el" "rb_optparse.bash" "csharp-mode.el" "deft.el" "javascript-mode.el" "el-rusticus.el" "rubydb3x.el" "ruby-style.el" "rubydb2x.el" "el-color.el" "linum.el" "psvn.el" "smooth-scrolling.el" "ruby-additional.el" "find-recursive.el" "snippet.el" "rdoc-mode.el" "old-rusticusruby.el" "./" "inf-ruby.el" "sr-speedbar.el" "mode-compile.el" "el-packages.el" "../" "el-programming.el" "ruby-mode.el" "el-basic.el" "ruby-electric.el" "el-orgmode.el" "tidy.el" "rb_optparse.zsh")
+
+ ("/home/russell/" (21471 5204 0 0) ".gnome2/" "Dropbox/" ".pki/" ".pulse/" ".xscreensaver" ".freerdp/" "templates/" "work/" "documents/" ".matplotlib/" ".emacs" ".bash_history" ".gmrunrc" ".fonts.conf" ".sqlite_history" ".hivehistory" ".gksu.lock" ".pulse-cookie" ".thumbnails/" "tmp/" ".qtoctave/" "downloads/" ".pbuilderrc" ".dropbox/" ".irb-history" "development/" ".macromedia/" ".pip/" ".icedtea/" ".dbus/" ".gtkrc-2.0.mine" ".minecraft/" ".gphoto/" ".adobe/" ".octave_hist" "Desktop/" ".bash_logout" ".icedove/" ".gem/" ".zlogin" ".xchat2/" ".cache/" ".dropbox-dist/" ".gtkrc-2.0" ".emacs.d/" "emacs-config/" ".mozilla/" ".profile" ".icons/" "music/" ".gconf/" ".gnome/" ".conkyrc" ".gnome2_private/" ".themes/" ".fonts/" ".TrueCrypt/" ".gitconfig" "octave-core" ".gstreamer-0.10/" "./" ".local/" ".gvfs/" ".galculator" ".gmrun_history" "bin/" "videos/" ".Xauthority" ".xsession-errors" ".zshrc" ".bash_profile" "../" "spark/" ".dmenu_cache" ".rvm/" ".gtk-bookmarks" ".ssh/" ".bashrc" "backup/" ".viminfo" ".conkeror.mozdev.org/" ".pry_history" ".fontconfig/" ".Xresources" ".lesshst" "images/" ".openshift/" ".config/" ".lastpass/" "screenfetch-dev")
+
+ ("/home/russell/development/domus/domus_padrino/app/controllers/" (21464 20147 0 0) "member_attachments.rb" "sessions.rb" "notes.rb" "household_members.rb" "member_additional_data.rb" ".#domus.rb" "birthdays.rb" "note_attachments.rb" "base.rb" "weather.rb" "notebooks.rb" "list_items.rb" "member_emails.rb" "lists.rb" "./" "households.rb" "weather_graph.rb" "members.rb" "../" "serverstats.rb")
+
+ ("/home/russell/development/domus/domus_padrino/app/views/list_items/" (21464 19667 0 0) "_form.html.erb" "show.html.erb" "./" "index.html.erb" "../" "edit.html.erb" "new.html.erb")
+
+ ("/home/russell/development/domus/domus_padrino/db/" (21464 20171 0 0) "original_seeds.rb" "add_list_types.rb" "seeds.rb" "import_journal.rb" "domus_padrino_development.db" "export_full_domus_db.sh" "./" "journal3_db.txt" "../" "migrate/" "schema.rb" "journal.db")
+
+ ("/home/russell/Dropbox/Apps/Plain.txt/" (21464 63692 0 0) "t1.txt" "Sunday Session 4-6-14.txt" "3M Core values.txt" "Ruck.txt" "New phone.txt" "backups/" ".dropbox" "Priesthood session 4-5-14.txt" "Small homesteading.txt" "snippets.txt" "Locks.txt" "Book log.txt" "journal.txt" "chapter4.txt" "Grow Box.txt" "8th grade test.txt" "test.txt" "./" "family mission statement.txt" "Datamodel.txt" "Test one.txt" ".#snippets.txt" "katahdin.txt" "../" ".#Book log.txt" "Questions for Datastax meeting.txt")
+
+ ("/home/russell/Dropbox/org/" (21471 5271 0 0) "work.org" "archive_personal.org" "birthdays.org" "t3.org" "rails.png" "cloudtech.org" "tasks.org" "./" "personal.org" "../" "archive_work.org" "preparedness.org")
+
+ ("/home/russell/Dropbox/" (21463 62517 0 0) "Photos/" "Minecraft/" "ml/" "E=clint@virtualvoodoo.com" "Apps/" "PlainText/" ".dropbox" "E=clint@lordfam.com" "Shared/" "W2 TaxForms 2-18-2014.pdf" "files/" "domus library/" "AutoInsuranceIdCards.pdf" "ipython/" "my_comodo_cert.p12" "./" "Public/" "This is your Dropbox.txt" "../" "org/" "Camera Uploads/" "CloudTech/" ".dropbox.cache/")
+
+ ("/home/russell/development/domus/domus_padrino/db/migrate/" (21463 49876 0 0) "001_create_members.rb" "016_add_field_to_weather_data.rb" "003_create_households.rb" "005_create_lists.rb" "012_create_member_emails.rb" "004_create_household_members.rb" "013_create_notebooks.rb" "021_add_field_to_list.rb" "007_add_field_to_list_item.rb" "015_create_note_attachments.rb" "022_add_fields_to_list_item.rb" "008_create_member_additional_data.rb" "./" "018_remove_field_from_list_item.rb" "020_create_list_types.rb" "006_create_list_items.rb" "011_create_member_attachments.rb" "../" "014_create_notes.rb" "010_create_forecasts.rb" "009_create_weather_data.rb" "019_add_qty_to_list_item.rb" "002_add_fields_to_member.rb" "017_add_field_to_weatherdata.rb")
+
+ ("/home/russell/development/domus/domus_padrino/app/" (21462 54716 0 0) "helpers/" "app.rb" "views/" "./" "../" "controllers/")
+
+ ("/home/russell/development/domus/librarium/" (21462 55279 0 0) "hourly.rb" "client_secrets.json" "socket_example.rb" "test_em_client.rb" "librarium.yml" "tests.rb" "cerebrum.rb" "update_weather_data.rb" "gtalkbot.rb" "spinea.rb" "blather_bot.rb" "modules/" "calendar.log" "gcal_test.rb" "./" "../")
+
+ ("/home/russell/development/domus/domus_padrino/app/views/weather_graph/" (21455 3527 0 0) "./" "index.html.erb" "day.html.erb" "../")
+
+ ("/home/russell/development/domus/domus_padrino/app/views/serverstats/" (21461 40658 0 0) "./" "index.html.erb" "../")
+
+ ("/home/russell/development/domus/domus_padrino/app/views/lists/" (21458 52357 0 0) "_form.html.erb" "./" "index.html.erb" "../" "edit.html.erb" "new.html.erb")
+
+ ("/home/russell/Dropbox/ml/titanic/" (21450 59197 0 0) "first_attempt/" "plotExploration.py" "kmeansSubmission_training_1.csv" "adaboostSubmission.py" "adaboostSubmission_1.csv" "gbrtSubmission_training_1.csv" "gbrtSubmission.py" "svmSubmission_training_1.csv" "forestSubmission_cross_3.csv" "forestSubmission.py" "gbrtSubmission_3.csv" "plotGBRT.py" "gbrtSubmission_1.csv" "kmeansSubmission.py" "plotSVM.py" "forestSubmission_training_1.csv" "cleaned_test.csv" "gbrtSubmission_scaled_1.csv" "forestSubmission_scaled_1.csv" "adaboostSubmission_training_1.csv" "plotting1.py" "logloss.pyc" "plotAda.py" "forestSubmission_naive.csv" "data/" "plotForest.py" "./" "crossvalidation_forest.py" "svmSubmission.py" "cleantitanic.py" "logloss.py" "gbrtSubmission_2.csv" "../" "plotKmeans.py" "cleaned_train.csv")
+
+ ("/home/russell/development/domus/web_site/app/views/notes/" (21444 31416 0 0) "_form.html.erb" "search.html.erb" "json.erb" "show.html.erb" "./" "index.html.erb" "../" ".#edit.html.erb" "edit.html.erb" "new.html.erb")
+
+ ("/home/russell/development/domus/domus_padrino/app/views/layouts/" (21444 2644 0 0) "./" "../" "application.html.erb")
+
+ ("/home/russell/development/domus/domus_padrino/app/views/notebooks/" (21444 30653 0 0) "_form.html.erb" "./" "index.html.erb" "../" "edit.html.erb" "new.html.erb")
+
+ ("/home/russell/development/domus/domus_padrino/app/views/notes/" (21444 31416 0 0) "_form.html.erb" "search.html.erb" "json.erb" "show.html.erb" "./" "index.html.erb" "../" ".#edit.html.erb" "edit.html.erb" "new.html.erb")
+
+ ("/home/russell/development/domus/domus_padrino/app/views/sessions/" (21444 3210 0 0) "./" "../" "new.erb")
+
+ ("/home/russell/development/domus/domus_padrino/app/views/domus/" (21290 11 0 0) "./" "index.html.erb" "../")
 
  ("/home/russell/.emacs.d/vendor/emacs-powerline/" (21436 46275 0 0) ".git/" "powerline.el" ".gitignore" "./" "AUTHORS" "../" "README.rst")
 
@@ -114,13 +161,7 @@
 
  ("/home/russell/.emacs.d/" (21436 46761 0 0) "vendor/" "ido.last" "recentf" "mode-compile.elc" "auto-save-list/" "lisp/" "ac-comphist.dat" "./" "elpa/" "tidy.elc" "../" "semantic.cache")
 
- ("/home/russell/" (21435 30136 0 0) ".gnome2/" "Dropbox/" ".pki/" ".pulse/" ".xscreensaver" ".freerdp/" "templates/" "work/" ".dropbox-master/" "documents/" ".matplotlib/" ".emacs" ".bash_history" ".gmrunrc" ".fonts.conf" ".sqlite_history" ".hivehistory" ".gksu.lock" ".pulse-cookie" ".thumbnails/" "tmp/" ".qtoctave/" "downloads/" ".pbuilderrc" ".dropbox/" ".irb-history" "development/" ".macromedia/" ".pip/" ".icedtea/" ".dbus/" ".gtkrc-2.0.mine" ".minecraft/" ".gphoto/" ".adobe/" ".octave_hist" "build/" "Desktop/" "First Notebook.ipynb" ".bash_logout" ".icedove/" ".gem/" ".zlogin" ".xchat2/" ".cache/" ".dropbox-dist/" ".gtkrc-2.0" ".emacs.d/" "emacs-config/" ".mozilla/" ".profile" ".icons/" "music/" ".gconf/" ".gnome/" ".conkyrc" ".gnome2_private/" ".themes/" ".fonts/" ".TrueCrypt/" "octave-core" ".gstreamer-0.10/" "./" ".local/" ".gvfs/" ".gmrun_history" "bin/" "videos/" ".Xauthority" ".xsession-errors" ".zshrc" ".bash_profile" "../" "spark/" ".dmenu_cache" ".rvm/" ".gtk-bookmarks" ".ssh/" ".bashrc" "Titanic.ipynb" "backup/" ".viminfo" ".pry_history" ".fontconfig/" ".Xresources" "images/" ".openshift/" ".config/" ".lastpass/" "screenfetch-dev")
-
- ("/home/russell/Dropbox/" (21435 30177 0 0) "Photos/" "Minecraft/" "ml/" "E=clint@virtualvoodoo.com" "Apps/" "PlainText/" ".dropbox" "E=clint@lordfam.com" "Shared/" "W2 TaxForms 2-18-2014.pdf" "files/" "domus library/" "AutoInsuranceIdCards.pdf" "Disneyland/" "Russell May/" "./" "Public/" "This is your Dropbox.txt" "../" "org/" "voicecommand/" "Camera Uploads/" "CloudTech/" ".dropbox.cache/")
-
  ("/home/russell/work/" (21410 4035 0 0) ".#parselog.py" "parselog.py" "data/" "./" "../" "show_log.py")
-
- ("/home/russell/Dropbox/Apps/Plain.txt/" (21427 660 0 0) "t1.txt" "Sunday Session 4-6-14.txt" "3M Core values.txt" "Ruck.txt" "New phone.txt" "backups/" ".dropbox" "Priesthood session 4-5-14.txt" "Small homesteading.txt" "snippets.txt" "Locks.txt" "Book log.txt" "journal.txt" "chapter4.txt" "Grow Box.txt" "8th grade test.txt" "test.txt" "./" "family mission statement.txt" "Datamodel.txt" "Test one.txt" ".#snippets.txt" "katahdin.txt" "../" ".#Book log.txt" "Questions for Datastax meeting.txt")
 
  ("/home/russell/Desktop/" (21287 25669 0 0) "./" "../")
 
@@ -128,15 +169,7 @@
 
  ("/home/russell/development/domus/domus_padrino/config/" (21345 30253 0 0) "boot.rb" "database.rb" "apps.rb" "./" "../")
 
- ("/home/russell/development/domus/web_site/config/" (21345 30253 0 0) "boot.rb" "database.rb" "apps.rb" "./" "../")
-
  ("/home/russell/development/domus/web_site/app/views/base/" (21345 31533 0 0) "index.erb" "./" "../")
-
- ("/home/russell/development/domus/web_site/app/controllers/" (21381 10276 0 0) "member_attachments.rb" "sessions.rb" "notes.rb" "household_members.rb" "member_additional_data.rb" ".#domus.rb" "birthdays.rb" "note_attachments.rb" "base.rb" "weather.rb" "notebooks.rb" "list_items.rb" "member_emails.rb" "lists.rb" "./" "households.rb" "weather_graph.rb" "members.rb" "../" "serverstats.rb")
-
- ("/home/russell/development/domus/domus_padrino/app/views/lists/" (21346 63652 0 0) "_form.html.erb" "./" "index.html.erb" "../" "edit.html.erb" "new.html.erb")
-
- ("/home/russell/development/domus/web_site/app/views/notes/" (21362 41648 0 0) "_form.html.erb" "search.html.erb" "json.erb" "show.html.erb" "./" "index.html.erb" "../" ".#edit.html.erb" "edit.html.erb" "new.html.erb")
 
  ("/home/russell/development/domus/domus_padrino/models/" (21346 63607 0 0) "note.rb" "note_attachment.rb" "member_additional_data.rb" "list_item.rb" "weather_data.rb" "member_email.rb" "forecast.rb" "list_type.rb" "notebook.rb" "./" "member.rb" "household.rb" "../" "list.rb" "household_member.rb" "member_attachment.rb")
 
@@ -144,31 +177,15 @@
 
  ("/home/russell/development/domus/domus_padrino/app/views/note_attachments/" (21326 63470 0 0) "_form.html.erb" "show.html.erb" "./" "../" "new.html.erb")
 
- ("/home/russell/development/domus/web_site/db/" (21361 24294 0 0) "original_seeds.rb" "add_list_types.rb" "seeds.rb" "import_journal.rb" "domus_padrino_development.db" "export_full_domus_db.sh" "./" "journal3_db.txt" "../" "migrate/" "schema.rb" "journal.db")
-
  ("/home/russell/development/domus/domus_padrino/app/helpers/" (21337 36883 0 0) "member_email_helper.rb" "weather_helper.rb" "note_helper.rb" "list_helper.rb" "list_item_helper.rb" "notebook_helper.rb" "birthdays_helper.rb" "serverstats_helper.rb" "household_helper.rb" "./" "../" "household_member_helper.rb" "weather_graph_helper.rb" "member_additional_data_helper.rb" "member_attachment_helper.rb")
-
- ("/home/russell/development/domus/domus_padrino/db/" (21361 24294 0 0) "original_seeds.rb" "add_list_types.rb" "seeds.rb" "import_journal.rb" "domus_padrino_development.db" "export_full_domus_db.sh" "./" "journal3_db.txt" "../" "migrate/" "schema.rb" "journal.db")
-
- ("/home/russell/development/domus/domus_padrino/app/views/layouts/" (21361 24134 0 0) "./" "../" "application.html.erb" ".#application.html.erb")
 
  ("/home/russell/development/domus/domus_padrino/app/views/weather/" (21345 30326 0 0) "./" "index.html.erb" "../")
 
- ("/home/russell/development/domus/librarium/" (21347 45690 0 0) "hourly.rb" "client_secrets.json" "socket_example.rb" "test_em_client.rb" "librarium.yml" "tests.rb" "cerebrum.rb" "update_weather_data.rb" "gtalkbot.rb" "spinea.rb" "blather_bot.rb" "modules/" "calendar.log" "gcal_test.rb" "./" "../")
-
  ("/home/russell/development/domus/domus_padrino/app/views/base/" (21345 31533 0 0) "index.erb" "./" "../")
-
- ("/home/russell/development/domus/domus_padrino/app/views/weather_graph/" (21370 39613 0 0) "./" "index.html.erb" "day.html.erb" "../")
-
- ("/home/russell/development/domus/domus_padrino/app/views/serverstats/" (21381 9806 0 0) "./" "index.html.erb" "../")
 
  ("/home/russell/Dropbox/ml/python/digits/" (21383 15911 0 0) "ex4data1.mat" "test_nn.py" "older/" "nn1.py" "data/" "ex4weights.mat" "./" "../")
 
  ("/home/russell/Dropbox/ml/" (21372 49815 0 0) "ruby/" "titanic/" "octave/" "./" "../" "python/" "coursera-ng/")
-
- ("/home/russell/development/domus/domus_padrino/app/controllers/" (21381 10276 0 0) "member_attachments.rb" "sessions.rb" "notes.rb" "household_members.rb" "member_additional_data.rb" ".#domus.rb" "birthdays.rb" "note_attachments.rb" "base.rb" "weather.rb" "notebooks.rb" "list_items.rb" "member_emails.rb" "lists.rb" "./" "households.rb" "weather_graph.rb" "members.rb" "../" "serverstats.rb")
-
- ("/home/russell/development/domus/domus_padrino/app/views/notes/" (21362 41648 0 0) "_form.html.erb" "search.html.erb" "json.erb" "show.html.erb" "./" "index.html.erb" "../" ".#edit.html.erb" "edit.html.erb" "new.html.erb")
 
  ("/home/russell/development/domus/librarium/modules/" (21345 30446 0 0) "weather_tests.rb" "module_whois.rb" "module_unknown.rb" "birthdays.rb" "module_findmember.rb" "quisquiliae.rb" "tasks.rb" "module_ping.rb" "module_help.rb" "wunderground_v2.rb" "module_recyc.rb" "module_ip.rb" "./" "module_weather.rb" "modulecore.rb" "../" "wunderground.rb")
 
@@ -184,17 +201,11 @@
 
  ("/home/russell/development/domus/domus_padrino/app/views/member_additional_data/" (21324 21154 0 0) "_form.html.erb" "show.html.erb" "./" "index.html.erb" "../" "edit.html.erb" "new.html.erb")
 
- ("/home/russell/development/domus/domus_padrino/app/views/list_items/" (21324 21339 0 0) "_form.html.erb" "show.html.erb" "./" "index.html.erb" "../" "edit.html.erb" "new.html.erb")
-
- ("/home/russell/development/domus/domus_padrino/app/views/notebooks/" (21325 42703 0 0) "_form.html.erb" "./" "index.html.erb" "../" "edit.html.erb" "new.html.erb")
-
  ("/home/russell/development/domus/web_site/app/views/" (21325 46720 0 0) "serverstats/" "household_members/" "members/" "weather_graph/" "base/" "member_additional_data/" "sessions/" "member_emails/" "weather/" "households/" "list_items/" "./" "notes/" "layouts/" "birthdays/" "../" "member_attachments/" "notebooks/" "domus/" "lists/")
 
  ("/home/russell/development/domus/web_site/app/" (21325 46263 0 0) "helpers/" "app.rb" "views/" "./" "../" "controllers/")
 
  ("/home/russell/development/domus/web_site/" (21325 18910 0 0) "start_server.sh" "models/" "Gemfile" "tmp/" "config/" ".gitignore" "public/" "admin/" "config.ru" "Gemfile.lock" "./" "app/" "../" ".components" "Rakefile" "db/")
-
- ("/home/russell/development/domus/domus_padrino/app/" (21325 46263 0 0) "helpers/" "app.rb" "views/" "./" "../" "controllers/")
 
  ("/home/russell/development/domus/domus_padrino/public/" (21319 3163 0 0) "favicon.ico" "admin/" "stylesheets/" "javascripts/" "./" "../" "fonts/" "images/")
 
@@ -245,8 +256,6 @@
  ("/home/" (21285 3073 0 0) "rmay/" "./" "../" "russell/")
 
  ("/home/russell/development/domus/domus_padrino/admin/" (21290 11 0 0) "app.rb" "views/" "./" "../" "controllers/")
-
- ("/home/russell/development/domus/domus_padrino/app/views/sessions/" (21290 7836 0 0) "./" "../" "new.erb")
 
  ("/home/russell/development/domus/domus_web/models/" (21288 54338 0 0) "./" "member.rb" "../" "member2.rb")
 
