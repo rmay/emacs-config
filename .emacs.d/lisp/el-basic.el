@@ -45,7 +45,6 @@
 (global-set-key "\C-x\ \C-r" 'recentf-open-files)
 
 ;; Few of my tweaks
-(global-set-key [f7] 'goto-line)
 (global-set-key [f8] 'indent-region)
 (global-set-key [f2] 'eshell)
 (global-set-key [f3] 'calendar)
@@ -80,6 +79,11 @@
 (global-auto-revert-mode 1)
 
 (message "Flyspell mode")
+(eval-after-load "flyspell"
+    '(progn
+       (define-key flyspell-mouse-map [down-mouse-3] #'flyspell-correct-word)
+       (define-key flyspell-mouse-map [mouse-3] #'undefined)))
+(setq ispell-program-name "/usr/local/bin/aspell")
 ;;(flyspell-mode 1)
 (add-hook 'text-mode-hook
           (lambda () (flyspell-mode 1)))
@@ -89,7 +93,7 @@
           (lambda () (flyspell-mode 1)))
 ;;(add-hook 'diary-display-hook 'flyspell-mode)
 
-(setq visible-bell t)
+(setq visible-bell nil)
 
 
 

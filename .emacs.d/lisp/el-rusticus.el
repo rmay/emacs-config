@@ -3,7 +3,7 @@
 ;;(setq warning-minimum-level :error)
 
 ;;(message "What up, homeslice")
-(require 'el-packages)
+;(require 'el-packages)
 (require 'el-basic)
 (require 'el-programming)
 (require 'el-orgmode)
