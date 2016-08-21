@@ -43,12 +43,12 @@
   (progn ; else
     ;;;(setq org-agenda-file "/home/russell/Dropbox/org/tasks.org")
     ;;;(setq org-agenda-archive "/home/russell/Dropbox/org/archive_personal.org::")
-    (setq org-agenda-file "/home/russell/Dropbox/org/work.org")
-    (setq org-agenda-archive "/home/russell/Dropbox/org/archive_work.org::")
-    (setq deft-dir "~/Dropbox/PlainText/")
-    (find-file "~/Dropbox/org/personal.org")
-    (find-file "~/Dropbox/org/tasks.org")
-    (find-file "~/Dropbox/org/work.org")
+    (setq org-agenda-file "~/Documents/Dropbox/org/work.org")
+    (setq org-agenda-archive "~/Documents/Dropbox/org/archive_work.org::")
+    (setq deft-dir "~/Documents/Dropbox/PlainText/")
+    (find-file "~/Documents/Dropbox/org/personal.org")
+    (find-file "~/Documents/Dropbox/org/tasks.org")
+    (find-file "~/Documents/Dropbox/org/work.org")
   )
 )
 
