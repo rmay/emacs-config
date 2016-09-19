@@ -19,9 +19,6 @@
 (setq auto-mode-alist
       (append '(("\\.css$" . html-mode)) auto-mode-alist))
 
-;; SVN
-;;(require 'psvn)
-
 ;; Ruby
 ;(require 'rusticusruby)
 
@@ -64,9 +61,18 @@
 ;;                     (- (frame-width) sr-speedbar-width)))
 ;;  (ad-enable-advice 'sr-speedbar-close 'after 'sr-speedbar-close-resize-frame))
 
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
 
 (add-to-list 'load-path "~/.emacs.d/vendor/emacs-powerline")
 (require 'powerline)
+
+(projectile-global-mode)
+(setq projectile-completion-system 'helm)
+(helm-projectile-on)
+
+(require 'yasnippet)
+(yas-global-mode 1)
 
 
 ;;(require 'smartparens-config)

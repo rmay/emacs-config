@@ -45,7 +45,7 @@
 (global-set-key "\C-x\ \C-r" 'recentf-open-files)
 
 ;; Few of my tweaks
-(global-set-key [f8] 'indent-region)
+;;(global-set-key [f8] 'indent-region)
 (global-set-key [f2] 'eshell)
 (global-set-key [f3] 'calendar)
 (global-set-key "\C-f" 'isearch-forward-regexp)
