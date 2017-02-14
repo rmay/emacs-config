@@ -2,7 +2,8 @@
 (require 'package)
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/"))
-
+(add-to-list 'package-archives 
+	     '("org" . "http://orgmode.org/elpa/") t)
 
 ;; Load and activate emacs packages. Do this first so that the
 ;; packages are loaded before you start trying to modify them.
@@ -51,14 +52,15 @@
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
  '(cua-mode t nil (cua-base))
+ '(inhibit-startup-screen t)
+ '(org-export-backends (quote (ascii html icalendar latex md)))
+ '(package-selected-packages
+   (quote
+    (flx-ido neotree monokai-theme projectile-rails org ## ox-gfm powerline yaml-mode smex exec-path-from-shell)))
  '(save-place t)
  '(show-paren-mode t)
  '(size-indication-mode t)
- '(tool-bar-mode nil)
- '(inhibit-startup-screen t)
- '(package-selected-packages
-   (quote
-    (yaml-mode smex exec-path-from-shell))))
+ '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

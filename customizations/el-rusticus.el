@@ -1,4 +1,5 @@
 ;; A slew of my changes
+(setq backup-inhibited t)
 (prefer-coding-system 'utf-8)
 (display-time)
 (column-number-mode 1)
@@ -11,6 +12,14 @@
 (global-set-key "\C-w" 'backward-kill-word)
 (fset 'yes-or-no-p 'y-or-n-p)
 (setq create-lockfiles nil)
+;; Enhancements for ido
+(require 'flx-ido)
+(ido-mode 1)
+(ido-everywhere 1)
+(flx-ido-mode 1)
+;; disable ido faces to see flx highlights.
+(setq ido-enable-flex-matching t)
+(setq ido-use-faces nil)
 
 (global-linum-mode)
 
@@ -88,8 +97,28 @@
 (setq electric-indent-mode nil)
 
 
-(setq initial-frame-alist '((top . 0) (left . 0) (width . 120) (height . 45)))
+(setq initial-frame-alist '((top . 0) (left . 45) (width . 120) (height . 45)))
 
 ;; shell scripts
 (setq-default sh-basic-offset 2)
 (setq-default sh-indentation 2)
+
+;; powerline
+(require 'powerline)
+
+
+;; For MacTeX for LaTex
+(setenv "PATH" (concat (getenv "PATH") ":/Library/TeX/texbin"))
+
+
+(setq monokai-height-minus-1 0.6
+        monokai-height-plus-1 1.1
+        monokai-height-plus-2 1.1
+        monokai-height-plus-3 1.1
+        monokai-height-plus-4 1.1)
+
+(load-theme 'monokai t)
+
+
+
+(projectile-rails-global-mode)

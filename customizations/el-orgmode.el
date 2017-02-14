@@ -3,6 +3,7 @@
 (setq base-dir "~/Documents/Dropbox/org/")
 (setq org-agenda-file (concat base-dir "work.org"))
 (setq org-agenda-archive (concat base-dir "archive_work.org::"))
+(find-file (concat base-dir "dreadilk.org"))
 (find-file (concat base-dir "personal.org"))
 ;;(find-file (concat base-dir "tasks.org"))
 (find-file (concat base-dir "work.org"))
@@ -20,7 +21,8 @@
 (global-set-key "\C-cb" 'org-iswitchb)
 (setq org-log-done t)
 
-
+;; For exporting orgmode to git flavored markdown
+(require 'ox-gfm)
 
 (provide 'el-orgmode)
 ;;; el-orgmode.el ends here
