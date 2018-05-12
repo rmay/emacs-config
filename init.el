@@ -34,8 +34,8 @@
         (package-refresh-contents))
 
 
-(if (eq system-type 'darwin)
-    (add-to-list 'my-packages 'exec-path-from-shell))
+;;(if (eq system-type 'darwin)
+;;    (add-to-list 'my-packages 'exec-path-from-shell))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
@@ -52,11 +52,13 @@
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
  '(cua-mode t nil (cua-base))
+ '(custom-safe-themes
+   (quote
+    ("c3d4af771cbe0501d5a865656802788a9a0ff9cf10a7df704ec8b8ef69017c68" default)))
  '(inhibit-startup-screen t)
- '(org-export-backends (quote (ascii html icalendar latex md)))
  '(package-selected-packages
    (quote
-    (flx-ido neotree monokai-theme projectile-rails org ## ox-gfm powerline yaml-mode smex exec-path-from-shell)))
+    (monokai-theme treemacs flx-ido neotree org powerline yaml-mode smex)))
  '(save-place t)
  '(show-paren-mode t)
  '(size-indication-mode t)

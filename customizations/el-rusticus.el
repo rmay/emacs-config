@@ -4,14 +4,16 @@
 (display-time)
 (column-number-mode 1)
 (global-visual-line-mode 1)
-(global-hl-line-mode 1)
+(global-hl-line-mode -1)
 (setq auto-save-default nil)
 (setq ring-bell-function 'ignore)
-(prefer-coding-system 'utf-8)
 (set-cursor-color "blue")
 (global-set-key "\C-w" 'backward-kill-word)
 (fset 'yes-or-no-p 'y-or-n-p)
 (setq create-lockfiles nil)
+(setq ns-pop-up-frames nil)
+(tool-bar-mode -1)
+(unless (display-graphic-p) (menu-bar-mode -1))
 ;; Enhancements for ido
 (require 'flx-ido)
 (ido-mode 1)
@@ -116,7 +118,7 @@
 
 
 ;; For MacTeX for LaTex
-(setenv "PATH" (concat (getenv "PATH") ":/Library/TeX/texbin"))
+;;(setenv "PATH" (concat (getenv "PATH") ":/Library/TeX/texbin"))
 
 
 (setq monokai-height-minus-1 0.6
@@ -128,5 +130,43 @@
 (load-theme 'monokai t)
 
 
+(setq insert-date-format "* %Y-%m-%d %A:")
+(defun insert-date ()
+  "Inserts the current date at point in the format specified by `insert-date-format'."
+  (interactive "*")
+  (insert (format-time-string insert-date-format)))
 
-(projectile-rails-global-mode)
+(define-key global-map [(control c)(m)] 'insert-date)
+
+
+(require 'ansi-color)
+(defun display-ansi-colors ()
+  (interactive)
+  (ansi-color-apply-on-region (point-min) (point-max)))
+
+(defun rmay/open-gcal-agenda ()
+  "Open my google calendar agenda file. The agenda is displayed in the buffer *gcal*."
+  (interactive)
+  ;; set name of calendar buffer and location of file containing my agenda
+  (let ((tmp-buff-name "*gcal*") (cal-file (expand-file-name "~/Dropbox/org/gcal")))
+    ;; switch to calendar buffer
+    (switch-to-buffer tmp-buff-name)
+    ;; turn off read only to overwrite if buffer exists
+    (read-only-mode -1)
+    ;; clear buffer
+    (erase-buffer)
+    ;; insert agenda file
+    (insert-file-contents cal-file)
+    ;; turn on colours
+    (display-ansi-colors)
+    ;; turn on special mode
+    (special-mode)
+    ;; turn off line wrapping
+    (visual-line-mode -1)))
+
+
+
+(require 'exec-path-from-shell) 
+(exec-path-from-shell-initialize)
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
