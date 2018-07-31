@@ -58,7 +58,7 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (monokai-theme treemacs flx-ido neotree org powerline yaml-mode smex)))
+    (htmlize ox-reveal monokai-theme treemacs flx-ido neotree org powerline yaml-mode smex)))
  '(save-place t)
  '(show-paren-mode t)
  '(size-indication-mode t)

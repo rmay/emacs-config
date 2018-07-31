@@ -2,6 +2,17 @@
 
 ;; Org mode
 (require 'org)
+(require 'ox-md)
+(require 'ox-latex)
+(add-to-list 'org-latex-classes
+             '("beamer"
+               "\\documentclass\[presentation\]\{beamer\}"
+               ("\\section\{%s\}" . "\\section*\{%s\}")
+               ("\\subsection\{%s\}" . "\\subsection*\{%s\}")
+               ("\\subsubsection\{%s\}" . "\\subsubsection*\{%s\}")))
+(require 'ox-beamer)
+(require 'ox-reveal)
+
 (setq org-todo-keywords
       (quote ((sequence "TODO(t)" "|" "DONE(d)")
               (sequence "HOLD(h@/!)" "|" "CANCELLED(c@/!)"))))
@@ -28,7 +39,7 @@
 (setq base-refile "refile-beorg.org")
 (setq org-agenda-file (concat base-dir "work.org"))
 (setq org-agenda-archive (concat base-dir "archive_work.org::"))
-(setq org-agenda-files (list org-agenda-file (concat base-dir base-refile)))
+(setq org-agenda-files (list org-agenda-file (concat base-dir base-refile) (concat base-dir "dreadtech.org")))
 (setq org-archive-location org-agenda-archive )
 (add-hook 'org-mode-hook 'turn-on-font-lock) ; not needed when global-font-lock-mode is on
 (global-set-key "\C-cl" 'org-store-link)
@@ -49,6 +60,10 @@
                "* %?\n%U\n"))))
 
 
+(find-file (concat base-dir "refile-beorg.org"))
+(find-file (concat base-dir "personal.org"))
+(find-file (concat base-dir "work.org"))
+(find-file (concat base-dir "slackup.org"))
 
 
 (provide 'el-orgmode)
