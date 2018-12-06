@@ -25,6 +25,12 @@
 
     ;; yaml-mode
     yaml-mode
+
+    ;; Elixir
+    elixir-mode
+
+    ;; flx-ido
+    flx-ido
 ))
 
 ;; Download the ELPA archive description if needed.
@@ -58,7 +64,7 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (htmlize ox-reveal monokai-theme treemacs flx-ido neotree org powerline yaml-mode smex)))
+    (w3m counsel projectile htmlize ox-reveal monokai-theme treemacs flx-ido neotree org powerline yaml-mode smex elixir)))
  '(save-place t)
  '(show-paren-mode t)
  '(size-indication-mode t)
@@ -69,3 +75,4 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+(put 'dired-find-alternate-file 'disabled nil)

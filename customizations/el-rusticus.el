@@ -14,6 +14,7 @@
 (setq ns-pop-up-frames nil)
 (tool-bar-mode -1)
 (unless (display-graphic-p) (menu-bar-mode -1))
+(global-auto-revert-mode t)
 ;; Enhancements for ido
 (require 'flx-ido)
 (ido-mode 1)
@@ -130,7 +131,7 @@
 (load-theme 'monokai t)
 
 
-(setq insert-date-format "* %Y-%m-%d %A:")
+(setq insert-date-format "* %Y-%m-%d %A:\n- ")
 (defun insert-date ()
   "Inserts the current date at point in the format specified by `insert-date-format'."
   (interactive "*")
@@ -170,3 +171,14 @@
 (exec-path-from-shell-initialize)
 (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
+
+
+(require 'dired )
+
+(define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file) ; was dired-advertised-find-file
+
+(define-key dired-mode-map (kbd "^") (lambda () (interactive) (find-alternate-file "..")))  ; was dired-up-directory
+
+(projectile-mode +1)
+(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)

@@ -37,10 +37,12 @@
 
 (setq base-dir "~/Dropbox/org/")
 (setq base-refile "refile-beorg.org")
+(setq task-file-target (concat base-dir base-refile))
 (setq org-agenda-file (concat base-dir "work.org"))
 (setq org-agenda-archive (concat base-dir "archive_work.org::"))
 (setq org-agenda-files (list org-agenda-file (concat base-dir base-refile) (concat base-dir "dreadtech.org")))
 (setq org-archive-location org-agenda-archive )
+(setq org-refile-targets '((org-agenda-files :maxlevel . 3)))
 (add-hook 'org-mode-hook 'turn-on-font-lock) ; not needed when global-font-lock-mode is on
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-ca" 'org-agenda)
@@ -50,17 +52,19 @@
 
 (setq org-default-notes-file (concat base-dir base-refile))
 
+(setq diary-file (concat base-dir "diary.org"))
+
 ;; Capture templates for: TODO tasks, Notes, appointments, phone calls, meetings, and org-protocol
 (setq org-capture-templates
-      (quote (("t" "todo" entry (file (concat base-dir base-refile))
+      (quote (("t" "todo" entry (file task-file-target)
                "* TODO %?\n%U\n")
               ("n" "note" entry (file (concat base-dir base-refile))
                "* %? :NOTE:\n")
-              ("j" "Journal" entry (file+datetree (concat base-dir "diary.org"))
+              ("j" "Journal" entry (file+olp+datetree diary-file)
                "* %?\n%U\n"))))
 
 
-(find-file (concat base-dir "refile-beorg.org"))
+(find-file task-file-target)
 (find-file (concat base-dir "personal.org"))
 (find-file (concat base-dir "work.org"))
 (find-file (concat base-dir "slackup.org"))
