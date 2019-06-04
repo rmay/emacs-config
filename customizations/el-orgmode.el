@@ -36,11 +36,17 @@
 (add-to-list 'auto-mode-alist '("\\todo.txt\\'" . org-mode))
 
 (setq base-dir "~/Dropbox/org/")
-(setq base-refile "refile-beorg.org")
+(setq base-refile "inbox.org")
+(setq base-project "projects.org")
+(setq project-file-target (concat base-dir base-project))
 (setq task-file-target (concat base-dir base-refile))
 (setq org-agenda-file (concat base-dir "work.org"))
 (setq org-agenda-archive (concat base-dir "archive_work.org::"))
-(setq org-agenda-files (list org-agenda-file (concat base-dir base-refile) (concat base-dir "dreadtech.org")))
+(setq org-agenda-files (list org-agenda-file 
+			     (concat base-dir base-refile) 
+			     (concat base-dir "work.org")
+			     (concat base-dir "projects.org") 
+			     (concat base-dir "personal.org")))
 (setq org-archive-location org-agenda-archive )
 (setq org-refile-targets '((org-agenda-files :maxlevel . 3)))
 (add-hook 'org-mode-hook 'turn-on-font-lock) ; not needed when global-font-lock-mode is on
@@ -57,17 +63,23 @@
 ;; Capture templates for: TODO tasks, Notes, appointments, phone calls, meetings, and org-protocol
 (setq org-capture-templates
       (quote (("t" "todo" entry (file task-file-target)
-               "* TODO %?\n%U\n")
-              ("n" "note" entry (file (concat base-dir base-refile))
+               "* TODO %?")
+              ("n" "note" entry (file task-file-target)
                "* %? :NOTE:\n")
               ("j" "Journal" entry (file+olp+datetree diary-file)
-               "* %?\n%U\n"))))
+               "* %?\n%U\n")
+	      ("p" "project" entry 
+	       (file project-file-target)
+	       (file "~/Dropbox/org/templates/project-tmpl.txt"))
+)))
 
-
+;; Load up a bunch of files
+(find-file (concat base-dir "resources.org"))
 (find-file task-file-target)
 (find-file (concat base-dir "personal.org"))
+(find-file (concat base-dir "projects.org"))
 (find-file (concat base-dir "work.org"))
-(find-file (concat base-dir "slackup.org"))
+;; (find-file (concat base-dir "slackup.org"))
 
 
 (provide 'el-orgmode)
