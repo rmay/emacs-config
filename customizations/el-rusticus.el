@@ -131,7 +131,8 @@
 (load-theme 'monokai t)
 
 
-(setq insert-date-format "* %Y-%m-%d %A:\n- ")
+;; OLD (setq insert-date-format "* %Y-%m-%d %A:\n- ")
+(setq insert-date-format "%Y-%m-%d %A: ")
 (defun insert-date ()
   "Inserts the current date at point in the format specified by `insert-date-format'."
   (interactive "*")
@@ -149,7 +150,7 @@
   "Open my google calendar agenda file. The agenda is displayed in the buffer *gcal*."
   (interactive)
   ;; set name of calendar buffer and location of file containing my agenda
-  (let ((tmp-buff-name "*gcal*") (cal-file (expand-file-name "~/Dropbox/org/gcal")))
+  (let ((tmp-buff-name "*gcal*") (cal-file (expand-file-name "~/Nextcloud/org/gcal")))
     ;; switch to calendar buffer
     (switch-to-buffer tmp-buff-name)
     ;; turn off read only to overwrite if buffer exists
@@ -165,7 +166,10 @@
     ;; turn off line wrapping
     (visual-line-mode -1)))
 
-
+(defun rmay/gcal-agenda-refresh ()
+  "Call gcalcli to save agenda to a file."
+  (interactive)
+  (let ((default-directory "~/Nextcloud/org/")) (shell-command "gcalcli agenda > gcal")))
 
 (require 'exec-path-from-shell) 
 (exec-path-from-shell-initialize)

@@ -35,11 +35,13 @@
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
 (add-to-list 'auto-mode-alist '("\\todo.txt\\'" . org-mode))
 
-(setq base-dir "~/Dropbox/org/")
+(setq base-dir "~/Nextcloud/org/")
 (setq base-refile "inbox.org")
 (setq base-project "projects.org")
+(setq base-notes "notes.org")
 (setq project-file-target (concat base-dir base-project))
 (setq task-file-target (concat base-dir base-refile))
+(setq note-file-target (concat base-dir base-notes))
 (setq org-agenda-file (concat base-dir "work.org"))
 (setq org-agenda-archive (concat base-dir "archive_work.org::"))
 (setq org-agenda-files (list org-agenda-file 
@@ -63,14 +65,14 @@
 ;; Capture templates for: TODO tasks, Notes, appointments, phone calls, meetings, and org-protocol
 (setq org-capture-templates
       (quote (("t" "todo" entry (file task-file-target)
-               "* TODO %?")
-              ("n" "note" entry (file task-file-target)
+               "* TODO %?\n%u")
+              ("n" "note" entry (file note-file-target)
                "* %? :NOTE:\n")
               ("j" "Journal" entry (file+olp+datetree diary-file)
                "* %?\n%U\n")
 	      ("p" "project" entry 
 	       (file project-file-target)
-	       (file "~/Dropbox/org/templates/project-tmpl.txt"))
+	       (file "~/Nextcloud/org/templates/project-tmpl.txt"))
 )))
 
 ;; Load up a bunch of files
