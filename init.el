@@ -27,7 +27,7 @@
     yaml-mode
 
     ;; Elixir
-    elixir-mode
+    ;; elixir-mode
 
     ;; flx-ido
     flx-ido
@@ -60,11 +60,14 @@
  '(cua-mode t nil (cua-base))
  '(custom-safe-themes
    (quote
-    ("c3d4af771cbe0501d5a865656802788a9a0ff9cf10a7df704ec8b8ef69017c68" default)))
+    ("14de8f58ad656af5be374086ae7ab663811633fc1483a02add92f7a1ff1a8455" "c3d4af771cbe0501d5a865656802788a9a0ff9cf10a7df704ec8b8ef69017c68" default)))
  '(inhibit-startup-screen t)
+ ;'(org-agenda-files
+ ;  (quote
+ ;   ("~/Dropbox/org/work.org" "~/Dropbox/org/inbox.org")))
  '(package-selected-packages
    (quote
-    (w3m counsel projectile htmlize ox-reveal monokai-theme treemacs flx-ido neotree org powerline yaml-mode smex elixir)))
+    (alert request monokai-theme flx-ido neotree org powerline yaml-mode smex)))
  '(save-place t)
  '(show-paren-mode t)
  '(size-indication-mode t)
