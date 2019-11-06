@@ -63,7 +63,7 @@
 (load "el-orgmode.el")
 
 ;; Projects and neotree
-(setq base-development-dir "~/work/")
+;;(setq base-development-dir "~/work/")
 ;;(find-file (concat base-development-dir "cra-reporting-rabbitmq-clojure/src/rabbitmq/process_factortrust_report.clj"))
 
 ;;;(require 'neotree)
@@ -122,14 +122,30 @@
 ;;(setenv "PATH" (concat (getenv "PATH") ":/Library/TeX/texbin"))
 
 
-(setq monokai-height-minus-1 0.6
-        monokai-height-plus-1 1.1
-        monokai-height-plus-2 1.1
-        monokai-height-plus-3 1.1
-        monokai-height-plus-4 1.1)
+;(setq monokai-height-minus-1 0.6
+;        monokai-height-plus-1 1.1
+;        monokai-height-plus-2 1.1
+;        monokai-height-plus-3 1.1
+;        monokai-height-plus-4 1.1)
 
-(load-theme 'monokai t)
+;; (load-theme 'monokai t)
+;; (load-theme 'adwaita t)
 
+;; (add-to-list 'load-path "~/.emacs.d/customizations/espresso-theme.el")
+;; (require 'espresso-theme)
+
+(require 'doom-themes)
+;; Global settings (defaults)
+(setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
+      doom-themes-enable-italic t) ; if nil, italics is universally disabled
+
+;(load-theme 'doom-one t)
+;(load-theme 'doom-dracula t)
+;; (load-theme 'doom-molokai t)
+;; Almost but too light (load-theme 'doom-nord-light t)
+(load-theme 'doom-one-light t)
+
+(doom-themes-org-config)
 
 ;; OLD (setq insert-date-format "* %Y-%m-%d %A:\n- ")
 (setq insert-date-format "%Y-%m-%d %A: ")
@@ -171,10 +187,10 @@
   (interactive)
   (let ((default-directory "~/Nextcloud/org/")) (shell-command "gcalcli agenda > gcal")))
 
-(require 'exec-path-from-shell) 
-(exec-path-from-shell-initialize)
-(when (memq window-system '(mac ns x))
-  (exec-path-from-shell-initialize))
+;;(require 'exec-path-from-shell) 
+;;(exec-path-from-shell-initialize)
+;;(when (memq window-system '(mac ns x))
+;;  (exec-path-from-shell-initialize))
 
 
 (require 'dired )
@@ -187,6 +203,8 @@
 (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
-(setq org-confirm-babel-evaluate nil)
-(require 'ob-ruby)
-(require 'ob-python)
+;; Wttr.in
+(setq wttrin-default-cities '("Draper" "Murray"))
+
+;; Define word
+(Global-set-key (kbd "C-c d") 'define-word-at-point)

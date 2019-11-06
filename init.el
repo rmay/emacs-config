@@ -31,6 +31,12 @@
 
     ;; flx-ido
     flx-ido
+
+    define-word 
+
+    wttrin 
+
+    doom-themes
 ))
 
 ;; Download the ELPA archive description if needed.
@@ -60,14 +66,11 @@
  '(cua-mode t nil (cua-base))
  '(custom-safe-themes
    (quote
-    ("14de8f58ad656af5be374086ae7ab663811633fc1483a02add92f7a1ff1a8455" "c3d4af771cbe0501d5a865656802788a9a0ff9cf10a7df704ec8b8ef69017c68" default)))
+    ("728eda145ad16686d4bbb8e50d540563573592013b10c3e2defc493f390f7d83" "a2286409934b11f2f3b7d89b1eaebb965fd63bc1e0be1c159c02e396afb893c8" "b462d00de785490a0b6861807a360f5c1e05b48a159a99786145de7e3cce3afe" "f951343d4bbe5a90dba0f058de8317ca58a6822faa65d8463b0e751a07ec887c" "f2b83b9388b1a57f6286153130ee704243870d40ae9ec931d0a1798a5a916e76" "14de8f58ad656af5be374086ae7ab663811633fc1483a02add92f7a1ff1a8455" "c3d4af771cbe0501d5a865656802788a9a0ff9cf10a7df704ec8b8ef69017c68" default)))
  '(inhibit-startup-screen t)
- ;'(org-agenda-files
- ;  (quote
- ;   ("~/Dropbox/org/work.org" "~/Dropbox/org/inbox.org")))
  '(package-selected-packages
    (quote
-    (alert request monokai-theme flx-ido neotree org powerline yaml-mode smex)))
+    (define-word wttrin doom-themes alert request monokai-theme flx-ido neotree org powerline yaml-mode smex)))
  '(save-place t)
  '(show-paren-mode t)
  '(size-indication-mode t)

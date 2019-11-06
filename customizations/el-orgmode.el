@@ -43,7 +43,7 @@
 (setq task-file-target (concat base-dir base-refile))
 (setq note-file-target (concat base-dir base-notes))
 (setq org-agenda-file (concat base-dir "work.org"))
-(setq org-agenda-archive (concat base-dir "archive_work.org::"))
+(setq org-agenda-archive (concat base-dir "archive.org::"))
 (setq org-agenda-files (list org-agenda-file 
 			     (concat base-dir base-refile) 
 			     (concat base-dir "work.org")
@@ -75,13 +75,21 @@
 	       (file "~/Nextcloud/org/templates/project-tmpl.txt"))
 )))
 
+(setq org-confirm-babel-evaluate nil)
+(require 'ob-ruby)
+(require 'ob-python)
+
 ;; Load up a bunch of files
-(find-file (concat base-dir "resources.org"))
-(find-file task-file-target)
-(find-file (concat base-dir "personal.org"))
-(find-file (concat base-dir "projects.org"))
-(find-file (concat base-dir "work.org"))
+;(find-file (concat base-dir "resources.org"))
+;; (find-file task-file-target)
+;(find-file (concat base-dir "personal.org"))
+;(find-file (concat base-dir "projects.org"))
+;(find-file (concat base-dir "work.org"))
 ;; (find-file (concat base-dir "slackup.org"))
+
+(split-window-right (floor (* -1 0.80 (window-width))))
+(find-file (concat base-dir "master.org"))
+;; (find-file (concat base-dir "work.org"))
 
 
 (provide 'el-orgmode)
