@@ -87,8 +87,8 @@
 ;(find-file (concat base-dir "work.org"))
 ;; (find-file (concat base-dir "slackup.org"))
 
-(split-window-right (floor (* -1 0.80 (window-width))))
-(find-file (concat base-dir "master.org"))
+;(split-window-right (floor (* -1 0.85 (window-width))))
+;(find-file (concat base-dir "master.org"))
 ;; (find-file (concat base-dir "work.org"))
 
 

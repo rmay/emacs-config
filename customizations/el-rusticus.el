@@ -64,24 +64,19 @@
 
 ;; Projects and neotree
 ;;(setq base-development-dir "~/work/")
-;;(find-file (concat base-development-dir "cra-reporting-rabbitmq-clojure/src/rabbitmq/process_factortrust_report.clj"))
 
-;;;(require 'neotree)
-;;;(global-set-key [f8] 'neotree-toggle)
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
 ;;(setq neo-theme 'classic)
-;;(setq neo-theme 'ascii) 
+(setq neo-theme 'ascii) 
 ;;(setq neo-theme 'arrow)
 ;;(setq neo-theme 'icons)
-;;;(setq neo-theme 'nerd)
+;;(setq neo-theme 'nerd)
 
-;;(neotree-toggle)
-;;(neotree-dir "~/work")
+(neotree-toggle)
+(neotree-dir "~/Nextcloud/org")
 ;;;(switch-to-buffer-other-window "*scratch*")
 
-;;;(require 'smooth-scrolling)
-;;(smooth-scrolling-mode 1)
-
-;;;; (split-window-right)
 
 ;; Rainbows
 (add-hook 'emacs-lisp-mode-hook       #'rainbow-delimiters-mode)
@@ -108,7 +103,7 @@
 (setq electric-indent-mode nil)
 
 
-(setq initial-frame-alist '((top . 0) (left . 45) (width . 120) (height . 45)))
+(setq initial-frame-alist '((top . 0) (left . 5) (width . 150) (height . 45)))
 
 ;; shell scripts
 (setq-default sh-basic-offset 2)
@@ -139,13 +134,19 @@
 (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
       doom-themes-enable-italic t) ; if nil, italics is universally disabled
 
-;(load-theme 'doom-one t)
+;; (load-theme 'doom-one t)
 ;(load-theme 'doom-dracula t)
 ;; (load-theme 'doom-molokai t)
 ;; Almost but too light (load-theme 'doom-nord-light t)
-(load-theme 'doom-one-light t)
+;; (load-theme 'doom-one-light t)
 
+;; I really amd digging this one
+(load-theme 'doom-peacock t)
 (doom-themes-org-config)
+
+(set-face-attribute 'region nil :background "#ff5d38")
+
+;;(load-theme 'organic-green t)
 
 ;; OLD (setq insert-date-format "* %Y-%m-%d %A:\n- ")
 (setq insert-date-format "%Y-%m-%d %A: ")
@@ -187,6 +188,12 @@
   (interactive)
   (let ((default-directory "~/Nextcloud/org/")) (shell-command "gcalcli agenda > gcal")))
 
+
+(defun rmay/weather ()
+  "Call wttrin"
+  (interactive)
+  (wttrin "Draper"))
+
 ;;(require 'exec-path-from-shell) 
 ;;(exec-path-from-shell-initialize)
 ;;(when (memq window-system '(mac ns x))
@@ -207,4 +214,4 @@
 (setq wttrin-default-cities '("Draper" "Murray"))
 
 ;; Define word
-(Global-set-key (kbd "C-c d") 'define-word-at-point)
+(global-set-key (kbd "C-c d") 'define-word-at-point)
