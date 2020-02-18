@@ -7,12 +7,12 @@
 (global-hl-line-mode -1)
 (setq auto-save-default nil)
 (setq ring-bell-function 'ignore)
-(set-cursor-color "blue")
+;;(set-cursor-color "blue")
 (global-set-key "\C-w" 'backward-kill-word)
 (fset 'yes-or-no-p 'y-or-n-p)
 (setq create-lockfiles nil)
 (setq ns-pop-up-frames nil)
-(tool-bar-mode -1)
+;;(tool-bar-mode -1)
 (unless (display-graphic-p) (menu-bar-mode -1))
 (global-auto-revert-mode t)
 ;; Enhancements for ido
@@ -42,8 +42,6 @@
 (require 'yaml-mode)
     (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
 
-;; full path in title bar
-(setq-default frame-title-format "%b (%f)")
 
 
 (message "Flyspell mode")
@@ -103,8 +101,6 @@
 (setq electric-indent-mode nil)
 
 
-(setq initial-frame-alist '((top . 0) (left . 5) (width . 150) (height . 45)))
-
 ;; shell scripts
 (setq-default sh-basic-offset 2)
 (setq-default sh-indentation 2)
@@ -117,51 +113,13 @@
 ;;(setenv "PATH" (concat (getenv "PATH") ":/Library/TeX/texbin"))
 
 
-;(setq monokai-height-minus-1 0.6
-;        monokai-height-plus-1 1.1
-;        monokai-height-plus-2 1.1
-;        monokai-height-plus-3 1.1
-;        monokai-height-plus-4 1.1)
-
-;; (load-theme 'monokai t)
-;; (load-theme 'adwaita t)
-
-;; (add-to-list 'load-path "~/.emacs.d/customizations/espresso-theme.el")
-;; (require 'espresso-theme)
-
-(require 'doom-themes)
-;; Global settings (defaults)
-(setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
-      doom-themes-enable-italic t) ; if nil, italics is universally disabled
-
-;; (load-theme 'doom-one t)
-;(load-theme 'doom-dracula t)
-;; (load-theme 'doom-molokai t)
-;; Almost but too light (load-theme 'doom-nord-light t)
-;; (load-theme 'doom-one-light t)
-
-;; I really amd digging this one
-(load-theme 'doom-peacock t)
-(doom-themes-org-config)
-
-(set-face-attribute 'region nil :background "#ff5d38")
-
-;;(load-theme 'organic-green t)
-
-;; OLD (setq insert-date-format "* %Y-%m-%d %A:\n- ")
-(setq insert-date-format "%Y-%m-%d %A: ")
-(defun insert-date ()
+(setq insert-date-format "%m-%d-%Y %A")
+(defun rmay/insert-date ()
   "Inserts the current date at point in the format specified by `insert-date-format'."
   (interactive "*")
   (insert (format-time-string insert-date-format)))
 
-(define-key global-map [(control c)(m)] 'insert-date)
-
-
-(require 'ansi-color)
-(defun display-ansi-colors ()
-  (interactive)
-  (ansi-color-apply-on-region (point-min) (point-max)))
+;; (define-key global-map [(control c)(m)] 'rmay/insert-date)
 
 (defun rmay/open-gcal-agenda ()
   "Open my google calendar agenda file. The agenda is displayed in the buffer *gcal*."
@@ -194,8 +152,14 @@
   (interactive)
   (wttrin "Draper"))
 
-;;(require 'exec-path-from-shell) 
-;;(exec-path-from-shell-initialize)
+(defun rmay/add-checkbox ()
+  "Quick checkbox add"
+  (interactive)
+  (insert "- [ ] "))
+(define-key global-map [(control c)(m)] 'rmay/add-checkbox)
+
+(require 'exec-path-from-shell) 
+(exec-path-from-shell-initialize)
 ;;(when (memq window-system '(mac ns x))
 ;;  (exec-path-from-shell-initialize))
 
@@ -206,12 +170,13 @@
 
 (define-key dired-mode-map (kbd "^") (lambda () (interactive) (find-alternate-file "..")))  ; was dired-up-directory
 
-(projectile-mode +1)
-(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
-(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+;(projectile-mode +1)
+;(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+;(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
-;; Wttr.in
-(setq wttrin-default-cities '("Draper" "Murray"))
 
 ;; Define word
 (global-set-key (kbd "C-c d") 'define-word-at-point)
+
+
+(load "el-decor.el")

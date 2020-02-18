@@ -43,7 +43,7 @@
 (setq task-file-target (concat base-dir base-refile))
 (setq note-file-target (concat base-dir base-notes))
 (setq org-agenda-file (concat base-dir "work.org"))
-(setq org-agenda-archive (concat base-dir "archive.org::"))
+(setq org-agenda-archive (concat base-dir "/archived/archive.org::"))
 (setq org-agenda-files (list org-agenda-file 
 			     (concat base-dir base-refile) 
 			     (concat base-dir "work.org")
