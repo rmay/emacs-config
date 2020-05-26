@@ -39,6 +39,8 @@
 (setq base-refile "inbox.org")
 (setq base-project "projects.org")
 (setq base-notes "notes.org")
+(setq base-anime "anime.org")
+(setq anime-file-target (concat base-dir base-anime))
 (setq project-file-target (concat base-dir base-project))
 (setq task-file-target (concat base-dir base-refile))
 (setq note-file-target (concat base-dir base-notes))
@@ -73,6 +75,9 @@
 	      ("p" "project" entry 
 	       (file project-file-target)
 	       (file "~/Nextcloud/org/templates/project-tmpl.txt"))
+	      ("a" "anime" entry 
+	       (file anime-file-target)
+	       (file "~/Nextcloud/org/templates/anime-tmpl.txt"))
 )))
 
 (setq org-confirm-babel-evaluate nil)
