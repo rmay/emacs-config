@@ -7,7 +7,7 @@
 (global-hl-line-mode -1)
 (setq auto-save-default nil)
 (setq ring-bell-function 'ignore)
-;; (set-cursor-color "blue")
+;;(set-cursor-color "blue")
 (global-set-key "\C-w" 'backward-kill-word)
 (fset 'yes-or-no-p 'y-or-n-p)
 (setq create-lockfiles nil)
@@ -59,6 +59,22 @@
           (lambda () (flyspell-mode 1)))
 
 (load "el-orgmode.el")
+
+;; Projects and neotree
+;;(setq base-development-dir "~/work/")
+
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
+;;(setq neo-theme 'classic)
+(setq neo-theme 'ascii) 
+;;(setq neo-theme 'arrow)
+;;(setq neo-theme 'icons)
+;;(setq neo-theme 'nerd)
+
+(neotree-toggle)
+(neotree-dir "~/Nextcloud/org")
+;;;(switch-to-buffer-other-window "*scratch*")
+
 
 ;; Rainbows
 (add-hook 'emacs-lisp-mode-hook       #'rainbow-delimiters-mode)
@@ -134,28 +150,13 @@
 (defun rmay/weather ()
   "Call wttrin"
   (interactive)
-  (wttrin "Draper"))
+  (wttrin "Draper?u"))
 
 (defun rmay/add-checkbox ()
   "Quick checkbox add"
   (interactive)
   (insert "- [ ] "))
 (define-key global-map [(control c)(m)] 'rmay/add-checkbox)
-
-(defun rmay/project ()
-  "Set up neotree"
-  (interactive)
-  (require 'neotree)
-  (global-set-key [f8] 'neotree-toggle)
-  ;;(setq neo-theme 'classic)
-  (setq neo-theme 'ascii) 
-  ;;(setq neo-theme 'arrow)
-  ;;(setq neo-theme 'icons)
-  ;;(setq neo-theme 'nerd)
-  (neotree-toggle)
-  (neotree-dir "~/Nextcloud/org")
-  ;;(switch-to-buffer-other-window "*scratch*")
-)
 
 (require 'exec-path-from-shell) 
 (exec-path-from-shell-initialize)
@@ -177,5 +178,6 @@
 ;; Define word
 (global-set-key (kbd "C-c d") 'define-word-at-point)
 
-
 (load "el-decor.el")
+
+(load "el-music.el")
